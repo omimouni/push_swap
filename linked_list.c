@@ -6,13 +6,13 @@
 /*   By: omimouni <omimouni@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 15:50:17 by omimouni          #+#    #+#             */
-/*   Updated: 2021/07/10 16:11:13 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/07/10 23:26:30 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_node	*ps_list_new()
+t_node	*ps_list_new(void)
 {
 	return (NULL);
 }
