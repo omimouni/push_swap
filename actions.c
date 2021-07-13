@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/13 12:22:52 by omimouni          #+#    #+#             */
-/*   Updated: 2021/07/13 12:32:14 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/07/13 13:16:30 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,34 @@ void	ps_action_push(t_stack **sa, t_stack **sb)
 	{
 		n = ps_stack_pop(sb);
 		ps_stack_push(sa, n);
+	}
+}
+
+void	ps_action_rotate(t_stack **stack)
+{
+	t_node	*tmp;
+
+	if ((*stack)->size >= 2)
+	{
+		tmp = malloc(sizeof(t_node));
+		tmp->num = ps_stack_pop(stack);
+		tmp->next = (*stack)->head;
+		(*stack)->head = tmp;
+		(*stack)->size += 1;
+	}
+}
+
+void	ps_action_rrotate(t_stack **stack)
+{
+	t_node	*tmp;
+	double	n;
+
+	if ((*stack)->size >= 2)
+	{
+		tmp = (*stack)->head;
+		(*stack)->head = (*stack)->head->next;
+		(*stack)->size -= 1;
+		ps_stack_push(stack, tmp->num);
+		free(tmp);
 	}
 }

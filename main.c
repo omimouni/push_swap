@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 01:54:48 by omimouni          #+#    #+#             */
-/*   Updated: 2021/07/13 12:38:21 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/07/13 13:16:52 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	main(int argc, char **argv)
 	// Push to stack A
 	while (argc > 1)
 		ps_stack_push(&a, (double)atoi(argv[--argc]));
+	ps_action_rrotate(&a);
 
 	// Print stacks at the end
 	printf("Stack a (%ld):\n", a->size);
