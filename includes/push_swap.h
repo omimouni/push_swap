@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: omimouni <omimouni@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 01:58:36 by omimouni          #+#    #+#             */
-/*   Updated: 2021/07/13 13:18:44 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/07/13 17:44:54 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,9 @@ void	ps_action_swap(t_stack	**stack);
 void	ps_action_push(t_stack **sa, t_stack **sb);
 void	ps_action_rotate(t_stack **stack);
 void	ps_action_rrotate(t_stack **stack);
+void	ps_check_args(char **argv, int argc);
+
+void	trigger_error(int n);
+
+void	ps_init(char **argv, int argc, t_stack	**a);
 #endif
