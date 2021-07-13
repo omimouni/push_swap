@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   actions.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/10 01:54:48 by omimouni          #+#    #+#             */
-/*   Updated: 2021/07/13 12:38:21 by omimouni         ###   ########.fr       */
+/*   Created: 2021/07/13 12:22:52 by omimouni          #+#    #+#             */
+/*   Updated: 2021/07/13 12:32:14 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	stack_print(t_stack	**stack)
+void	ps_action_swap(t_stack **stack)
 {
+	double	n;
 	double	m;
 
-	while ((m = ps_stack_pop(stack)))
-		printf("%.f\n", m);
+	n = ps_stack_pop(stack);
+	m = ps_stack_pop(stack);
+	ps_stack_push(stack, n);
+	ps_stack_push(stack, m);
 }
 
-int	main(int argc, char **argv)
+void	ps_action_push(t_stack **sa, t_stack **sb)
 {
-	t_stack	*a;
-	t_stack	*b;
+	double	n;
 
-	a = ps_stack_new();
-	b = ps_stack_new();
-	// Push to stack A
-	while (argc > 1)
-		ps_stack_push(&a, (double)atoi(argv[--argc]));
-
-	// Print stacks at the end
-	printf("Stack a (%ld):\n", a->size);
-	stack_print(&a);
-	printf("\nStack b (%ld):\n", b->size);
-	stack_print(&b);
+	if ((*sb)->size)
+	{
+		n = ps_stack_pop(sb);
+		ps_stack_push(sa, n);
+	}
 }
