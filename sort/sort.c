@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init.c                                             :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omimouni <omimouni@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/13 17:44:16 by omimouni          #+#    #+#             */
-/*   Updated: 2021/07/13 18:19:42 by omimouni         ###   ########.fr       */
+/*   Created: 2021/07/13 20:02:21 by omimouni          #+#    #+#             */
+/*   Updated: 2021/07/13 20:03:23 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ps_init(char **argv, int argc, t_stack	**a)
+void	sort_3_numbers(t_stack **sa, t_stack **sb)
 {
-	double	n;
-
-	while (argc > 1)
-	{
-		n = atof(argv[--argc]);
-		if (n > 2147483647 || n < -2147483648)
-			trigger_error(-1);
-		ps_stack_push(a, n);
-	}
+	
 }

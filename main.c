@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 01:54:48 by omimouni          #+#    #+#             */
-/*   Updated: 2021/07/13 17:54:48 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/07/13 18:39:35 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,5 @@ int main(int argc, char **argv)
 	// Clean up
 	ps_stack_free(&a);
 	ps_stack_free(&b);
+	return (0);
 }

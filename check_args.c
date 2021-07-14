@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/13 16:30:31 by omimouni          #+#    #+#             */
-/*   Updated: 2021/07/13 17:58:00 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/07/13 18:44:17 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,8 @@ static void	ps_isnum(char *s)
 void	ps_check_args(char **argv, int argc)
 {
 	int		i;
-	double	n;
-	int		f;
 
 	i = 1;
-	n = atof(argv[i]);
 	while (i < argc)
 		ps_isnum(argv[i++]);
 }

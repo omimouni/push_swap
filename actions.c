@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   actions.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: omimouni <omimouni@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/13 12:22:52 by omimouni          #+#    #+#             */
-/*   Updated: 2021/07/13 13:16:30 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/07/13 18:44:32 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ void	ps_action_rotate(t_stack **stack)
 void	ps_action_rrotate(t_stack **stack)
 {
 	t_node	*tmp;
-	double	n;
 
 	if ((*stack)->size >= 2)
 	{
