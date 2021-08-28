@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   arraylist.c                                        :+:      :+:    :+:   */
+/*   ft_arraylist.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omimouni <omimouni@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/07 21:30:58 by omimouni          #+#    #+#             */
-/*   Updated: 2021/08/11 00:13:22 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/08/28 11:18:32 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
 t_arraylist	ft_arraylist(int length)
 {
