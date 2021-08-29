@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omimouni <omimouni@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 17:25:18 by omimouni          #+#    #+#             */
-/*   Updated: 2021/08/20 16:23:53 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/08/29 14:19:05 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,20 @@ void	is_num(int argc, char **argv)
 			i++;
 		}
 	}
+}
+
+int	is_sorted(t_arraylist *a)
+{
+	int	i;
+	int	sort;
+
+	i = 0;
+	sort = 0;
+	while (i < a->length - 1)
+	{
+		if (a->list[i] < a->list[i + 1])
+			sort = 1;
+		i++;
+	}
+	return (sort);
 }
