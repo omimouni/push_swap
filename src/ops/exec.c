@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 14:56:50 by omimouni          #+#    #+#             */
-/*   Updated: 2021/08/28 12:46:13 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/08/29 14:36:46 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@ static void	ps_exec_swap(char *s, t_data *dt)
 {
 	if (!dt->exec)
 	{
-		if (!strncmp(s, "sa", 2))
+		if (!ft_strncmp(s, "sa", 2))
 		{
 			ps_swap(&dt->stack_a);
 			dt->exec = 1;
 			write(1, "sa\n", 3);
 		}
-		if (!strncmp(s, "sb", 2))
+		if (!ft_strncmp(s, "sb", 2))
 		{
 			ps_swap(&dt->stack_b);
 			dt->exec = 1;
 			write(1, "sb\n", 3);
 		}
-		if (!strncmp(s, "ss", 2))
+		if (!ft_strncmp(s, "ss", 2))
 		{
 			ps_swap(&dt->stack_a);
 			ps_swap(&dt->stack_b);
@@ -42,13 +42,13 @@ static void	ps_exec_push(char *s, t_data *dt)
 {
 	if (!dt->exec)
 	{
-		if (!strncmp(s, "pb", 2))
+		if (!ft_strncmp(s, "pb", 2))
 		{
 			ps_push(&dt->stack_b, &dt->stack_a);
 			dt->exec = 1;
 			write(1, "pb\n", 3);
 		}
-		if (!strncmp(s, "pa", 2))
+		if (!ft_strncmp(s, "pa", 2))
 		{
 			ps_push(&dt->stack_a, &dt->stack_b);
 			dt->exec = 1;
@@ -61,19 +61,19 @@ static void	ps_exec_rotate(char *s, t_data *dt)
 {
 	if (!dt->exec)
 	{
-		if (!strncmp(s, "ra", 2))
+		if (!ft_strncmp(s, "ra", 2))
 		{
 			ps_rotate(&dt->stack_a);
 			dt->exec = 1;
 			write(1, "ra\n", 3);
 		}
-		if (!strncmp(s, "rb", 2))
+		if (!ft_strncmp(s, "rb", 2))
 		{
 			ps_rotate(&dt->stack_b);
 			dt->exec = 1;
 			write(1, "rb\n", 3);
 		}
-		if (!strncmp(s, "rr", 2))
+		if (!ft_strncmp(s, "rr", 2))
 		{
 			ps_rotate(&dt->stack_a);
 			ps_rotate(&dt->stack_b);
@@ -87,19 +87,19 @@ static void	ps_exec_rrotate(char *s, t_data *dt)
 {
 	if (!dt->exec)
 	{
-		if (!strncmp(s, "rra", 3))
+		if (!ft_strncmp(s, "rra", 3))
 		{
 			ps_rrotate(&dt->stack_a);
 			dt->exec = 1;
 			write(1, "rra\n", 4);
 		}
-		if (!strncmp(s, "rrb", 3))
+		if (!ft_strncmp(s, "rrb", 3))
 		{
 			ps_rrotate(&dt->stack_b);
 			dt->exec = 1;
 			write(1, "rrb\n", 4);
 		}
-		if (!strncmp(s, "rrr", 3))
+		if (!ft_strncmp(s, "rrr", 3))
 		{
 			ps_rrotate(&dt->stack_a);
 			ps_rrotate(&dt->stack_b);

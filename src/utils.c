@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 17:25:18 by omimouni          #+#    #+#             */
-/*   Updated: 2021/08/29 14:19:05 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/08/29 15:05:25 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ void	ps_error(t_data *dt)
 	i = 0;
 	while (i < dt->stack_a.length)
 	{
-		if (dt->stack_a.list[i] < -2147483648
-			|| dt->stack_a.list[i] > 2147483647)
+		if (dt->stack_a.list[i] < FT_INT_MIN
+			|| dt->stack_a.list[i] > FT_INT_MAX)
 			ps_trigger();
 		i++;
 	}

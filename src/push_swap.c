@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:42:52 by omimouni          #+#    #+#             */
-/*   Updated: 2021/08/29 14:19:36 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/08/29 15:41:34 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	dt_free(t_data	*dt)
  */
 void	route(t_data *dt)
 {
-	(void)dt;
+	sort_big(dt);
 }
 
 /**
@@ -46,7 +46,7 @@ void	debug(t_data *dt)
 {
 	int	i;
 
-	printf("A : \n");
+	printf("\n\nDEBUG------\nA : \n");
 	i = dt->stack_a.length;
 	while (i >= 1)
 		printf("%.f\n", dt->stack_a.list[--i]);
@@ -73,5 +73,5 @@ int	main(int argc, char **argv)
 	if (DEBUG)
 		debug(&data);
 	dt_free(&data);
-	return (0);
+	return (0); 
 }
