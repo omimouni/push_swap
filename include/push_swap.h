@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:42:36 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/02 10:17:28 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/02 11:37:43 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,7 @@ void		ps_swap(t_arraylist *a);
 void		ps_rotate(t_arraylist *a);
 void		ps_rrotate(t_arraylist *a);
 void		ps_push(t_arraylist *a, t_arraylist *b);
+
+void		ps_sort_small(t_data *dt);
 
 #endif

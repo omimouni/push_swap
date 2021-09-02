@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:42:52 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/02 10:13:08 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/02 11:34:04 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,13 @@ static void	dt_free(t_data	*dt)
  */
 void	route(t_data *dt)
 {
-	(void)dt;
-	// sort_big(dt);
+	if (dt->length == 2)
+	{
+		if (dt->stack_a.list[1] > dt->stack_a.list[0])
+			ps_exec("sa", dt);
+	}
+	else if (dt->length <= 5)
+		ps_sort_small(dt);
 }
 
 /**
