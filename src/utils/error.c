@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   index.c                                            :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/29 15:43:16 by omimouni          #+#    #+#             */
-/*   Updated: 2021/08/30 11:34:06 by omimouni         ###   ########.fr       */
+/*   Created: 2021/09/02 10:05:15 by omimouni          #+#    #+#             */
+/*   Updated: 2021/09/02 10:05:49 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_elem	*ps_indexing(t_data *dt)
+void	ps_trigger(void)
 {
-	t_elem	*el;
-	int		i;
+	write(1, "Error\n", 7);
+	exit(1);
+}
 
-	el = malloc(sizeof(t_elem) * dt->length);
+void	ps_error(t_data *dt)
+{
+	int	i;
+
 	i = 0;
-	while (i < dt->length)
+	while (i < dt->stack_a.length)
 	{
-		el[i].id = 0;
-		el[i].number =  dt->stack_a.list[i];
+		if (dt->stack_a.list[i] < FT_INT_MIN
+			|| dt->stack_a.list[i] > FT_INT_MAX)
+			ps_trigger();
 		i++;
 	}
-	// ps_indexing_sort(dt, el);
-	return (el);	
+	check_dup(dt->stack_a.list, dt->stack_a.length);
 }

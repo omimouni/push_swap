@@ -6,14 +6,14 @@
 #    By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/05 17:38:34 by omimouni          #+#    #+#              #
-#    Updated: 2021/08/29 15:53:18 by omimouni         ###   ########.fr        #
+#    Updated: 2021/09/02 09:50:25 by omimouni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= push_swap
 SRCS	= $(wildcard src/*.c src/**/*.c)
 OBJS	= $(subst src/,,$(addprefix build/, $(patsubst %.c,%.o, $(SRCS))))
-FLAGS = -I./include -I./libft/include -Wall -Werror -Wextra -D DEBUG=0
+FLAGS = -I./include -I./libft/include -Wall -Werror -Wextra -D DEBUG=1
 
 LIBFT = libs/libft.a
 
@@ -40,6 +40,9 @@ build/%.o: src/%.c
 	@mkdir -p $(dir $@)
 	@gcc $(FLAGS) -c $< -o $@
 	@echo "\033[1;35m  $@ compiled\033[0m"
+
+files:
+	@echo $(SRCS)
 
 $(LIBFT): 
 	@make -sC ./libft

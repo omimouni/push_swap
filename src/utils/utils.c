@@ -6,19 +6,13 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 17:25:18 by omimouni          #+#    #+#             */
-/*   Updated: 2021/08/29 15:05:25 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/02 10:12:15 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ps_trigger(void)
-{
-	write(1, "Error\n", 7);
-	exit(1);
-}
-
-static void	check_dup(double *list, int size)
+void	check_dup(double *list, int size)
 {
 	int	i;
 	int	j;
@@ -35,21 +29,6 @@ static void	check_dup(double *list, int size)
 		}
 		i++;
 	}
-}
-
-void	ps_error(t_data *dt)
-{
-	int	i;
-
-	i = 0;
-	while (i < dt->stack_a.length)
-	{
-		if (dt->stack_a.list[i] < FT_INT_MIN
-			|| dt->stack_a.list[i] > FT_INT_MAX)
-			ps_trigger();
-		i++;
-	}
-	check_dup(dt->stack_a.list, dt->stack_a.length);
 }
 
 void	is_num(int argc, char **argv)
