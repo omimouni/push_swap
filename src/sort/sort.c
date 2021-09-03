@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 08:41:11 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/03 11:41:50 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/03 11:43:44 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	ps_sort(t_data *dt)
 	}
 	ps_sort_bubble_sort(elm, dt->length);
 	i = 0;
-	while (i < length)
+	while (i < dt->length)
 	{
 		elm[i].index = i;
 		i++;
