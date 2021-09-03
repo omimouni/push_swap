@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 08:41:11 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/03 09:11:42 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/03 10:36:09 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,11 @@ void	ps_sort(t_data *dt)
 	int	i;
 	int	j;
 	t_elem	*elm;
-
+	t_elem	*sorted;
+ 
 	elm = ps_elem_set(dt->length);
+	sorted = ps_elem_set(dt->length);
+
 	i = 0;
 	while (i < dt->length)
 	{
@@ -36,6 +39,7 @@ void	ps_sort(t_data *dt)
 	}
 
 	t_elem	tmp;
+	
 	i = 0;
 	while (i < dt->length - 1)
 	{
@@ -55,7 +59,7 @@ void	ps_sort(t_data *dt)
 		}
 		i++;
 	}
-
+	
 	i = 0;
 	while (i < dt->length)
 	{
@@ -63,4 +67,21 @@ void	ps_sort(t_data *dt)
 		printf("number : %.f\nsymbol : %d\nindex  : %d\n\n", elm[i].num, elm[i].symbol, elm[i].index);
 		i++;
 	}
+
+	i = 0;
+	while (i < dt->length)
+	{
+		sorted[i].num = elm[elm[i].symbol].num;
+		sorted[i].index = elm[elm[i].symbol].index;
+		i++;
+	}
+
+	// i = 0;
+	// while (i < dt->length)
+	// {
+	// 	// elm[i].index = i;
+	// 	printf("number : %.f\nsymbol : %d\nindex  : %d\n\n", sorted[i].num,
+	// 		sorted[i].symbol, sorted[i].index);
+	// 	i++;
+	// }
 }
