@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:42:36 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/02 11:37:43 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/03 08:45:56 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,6 @@ typedef struct s_data
 	int			exec;
 }	t_data;
 
-typedef struct s_elem
-{
-	double	number;
-	int		index;
-	int		id;
-}	t_elem;
-
 void		ps_error(t_data *dt);
 void		ps_trigger(void);
 void		check_dup(double *list, int size);
@@ -47,5 +40,12 @@ void		ps_rrotate(t_arraylist *a);
 void		ps_push(t_arraylist *a, t_arraylist *b);
 
 void		ps_sort_small(t_data *dt);
+void		ps_sort(t_data *dt);
+
+typedef struct s_elem
+{
+	double	num;
+	int		index;
+}	t_elem;
 
 #endif

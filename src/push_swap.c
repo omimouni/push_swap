@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:42:52 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/02 11:34:04 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/03 08:42:10 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ void	route(t_data *dt)
 		if (dt->stack_a.list[1] > dt->stack_a.list[0])
 			ps_exec("sa", dt);
 	}
-	else if (dt->length <= 5)
-		ps_sort_small(dt);
+	else
+		ps_sort(dt);
 }
 
 /**
