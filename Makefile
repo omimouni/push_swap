@@ -6,7 +6,7 @@
 #    By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/05 17:38:34 by omimouni          #+#    #+#              #
-#    Updated: 2021/09/02 11:25:13 by omimouni         ###   ########.fr        #
+#    Updated: 2021/09/03 06:58:46 by omimouni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,13 +25,13 @@ all: $(NAME)
 
 clean:
 	@rm -rf build/
-	@make -C ./libft clean
+	@make -sC ./libft clean
 	@echo "\033[1;31m> deleted all objects.\033[0m"
 
 fclean: clean
 	@rm -rf $(NAME)
 	@rm -rf $(LIBFT)
-	@make -C ./libft fclean
+	@make -sC ./libft fclean
 	@echo "\033[1;31m> deleted ./push_swap.\033[0m"
 
 re: fclean all
