@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 08:41:11 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/03 09:04:59 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/03 09:11:42 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,19 @@ void	ps_sort(t_data *dt)
 {
 	int	i;
 	int	j;
-	// double	min;
 	t_elem	*elm;
 
 	elm = ps_elem_set(dt->length);
-	printf("\n");
-
 	i = 0;
+	while (i < dt->length)
+	{
+		elm[i].num = dt->stack_a.list[i];
+		elm[i].symbol = i;
+		i++;
+	}
+
 	t_elem	tmp;
+	i = 0;
 	while (i < dt->length - 1)
 	{
 		j = 0;
@@ -48,16 +53,14 @@ void	ps_sort(t_data *dt)
 			}
 			j++;
 		}
-		printf("\n");
 		i++;
 	}
 
 	i = 0;
 	while (i < dt->length)
 	{
-		elm[i].num = dt->stack_a.list[i];
-		elm[i].symbol = i;
-		printf("number : %.f\nsymbol : %d\n\n", elm[i].num, elm[i].symbol);
+		elm[i].index = i;
+		printf("number : %.f\nsymbol : %d\nindex  : %d\n\n", elm[i].num, elm[i].symbol, elm[i].index);
 		i++;
 	}
 }
