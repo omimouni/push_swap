@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:42:36 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/03 08:45:56 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/03 08:59:41 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ typedef struct s_elem
 {
 	double	num;
 	int		index;
+	int		symbol;
 }	t_elem;
 
 #endif
