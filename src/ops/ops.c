@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ops.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omimouni <omimouni@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 18:37:29 by omimouni          #+#    #+#             */
-/*   Updated: 2021/08/21 11:20:05 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/14 14:44:49 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ps_swap(t_arraylist *a)
+void
+	ps_swap(t_arraylist *a)
 {
 	double	n;
 	double	m;
@@ -26,7 +27,8 @@ void	ps_swap(t_arraylist *a)
 	}
 }
 
-void	ps_push(t_arraylist *a, t_arraylist *b)
+void
+	ps_push(t_arraylist *a, t_arraylist *b)
 {
 	double	n;
 
@@ -37,7 +39,8 @@ void	ps_push(t_arraylist *a, t_arraylist *b)
 	}
 }
 
-void	ps_rotate(t_arraylist *a)
+void
+	ps_rotate(t_arraylist *a)
 {
 	double	n;
 	int		i;
@@ -52,7 +55,8 @@ void	ps_rotate(t_arraylist *a)
 	a->list[0] = n;
 }
 
-void	ps_rrotate(t_arraylist *a)
+void
+	ps_rrotate(t_arraylist *a)
 {
 	double	n;
 	int		i;

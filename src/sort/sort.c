@@ -6,13 +6,14 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 08:41:11 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/03 11:43:44 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/14 14:44:13 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	ps_sort_bubble_sort(t_elem *elm, int length)
+static void
+	ps_sort_bubble_sort(t_elem *elm, int length)
 {
 	int		i;
 	int		j;
@@ -39,7 +40,8 @@ static void	ps_sort_bubble_sort(t_elem *elm, int length)
 	}
 }
 
-static t_elem	*ps_sort_sorted(t_elem *elm, int length)
+static t_elem
+	*ps_sort_sorted(t_elem *elm, int length)
 {
 	int		i;
 	t_elem	*srt;
@@ -57,7 +59,8 @@ static t_elem	*ps_sort_sorted(t_elem *elm, int length)
 	return (srt);
 }
 
-void	ps_sort(t_data *dt)
+void
+	ps_sort(t_data *dt)
 {
 	int		i;
 	t_elem	*elm;

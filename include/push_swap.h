@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:42:36 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/03 08:59:41 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/14 14:34:53 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void		ps_rrotate(t_arraylist *a);
 void		ps_push(t_arraylist *a, t_arraylist *b);
 
 void		ps_sort_small(t_data *dt);
+void		ps_sort_five(t_data *dt);
 void		ps_sort(t_data *dt);
 
 typedef struct s_elem

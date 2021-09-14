@@ -6,13 +6,14 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 14:56:50 by omimouni          #+#    #+#             */
-/*   Updated: 2021/08/29 14:36:46 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/14 14:44:39 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	ps_exec_swap(char *s, t_data *dt)
+static void
+	ps_exec_swap(char *s, t_data *dt)
 {
 	if (!dt->exec)
 	{
@@ -38,7 +39,8 @@ static void	ps_exec_swap(char *s, t_data *dt)
 	}
 }
 
-static void	ps_exec_push(char *s, t_data *dt)
+static void
+	ps_exec_push(char *s, t_data *dt)
 {
 	if (!dt->exec)
 	{
@@ -57,7 +59,8 @@ static void	ps_exec_push(char *s, t_data *dt)
 	}
 }
 
-static void	ps_exec_rotate(char *s, t_data *dt)
+static void
+	ps_exec_rotate(char *s, t_data *dt)
 {
 	if (!dt->exec)
 	{
@@ -83,7 +86,8 @@ static void	ps_exec_rotate(char *s, t_data *dt)
 	}
 }
 
-static void	ps_exec_rrotate(char *s, t_data *dt)
+static void
+	ps_exec_rrotate(char *s, t_data *dt)
 {
 	if (!dt->exec)
 	{
@@ -109,7 +113,8 @@ static void	ps_exec_rrotate(char *s, t_data *dt)
 	}
 }
 
-void	ps_exec(char *s, t_data *dt)
+void
+	ps_exec(char *s, t_data *dt)
 {
 	dt->exec = 0;
 	ps_exec_swap(s, dt);

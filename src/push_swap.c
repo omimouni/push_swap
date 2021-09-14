@@ -6,13 +6,14 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:42:52 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/03 08:42:10 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/14 14:43:43 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	init(t_data *dt, int argc, char **argv)
+static void
+	init(t_data *dt, int argc, char **argv)
 {
 	int	i;
 
@@ -24,7 +25,8 @@ static void	init(t_data *dt, int argc, char **argv)
 		ft_arraylist_push(atof(argv[--i]), &(dt->stack_a));
 }
 
-static void	dt_free(t_data	*dt)
+static void
+	dt_free(t_data	*dt)
 {
 	free(dt->stack_a.list);
 	free(dt->stack_b.list);
@@ -34,13 +36,18 @@ static void	dt_free(t_data	*dt)
  * 	TODO: sort small numbers
  *	TODO: General algorithm to sort everything
  */
-void	route(t_data *dt)
+void
+	route(t_data *dt)
 {
 	if (dt->length == 2)
 	{
 		if (dt->stack_a.list[1] > dt->stack_a.list[0])
 			ps_exec("sa", dt);
 	}
+	else if (dt->length == 3)
+		ps_sort_small(dt);
+	else if (dt->length <= 5)
+		ps_sort_five(dt);
 	else
 		ps_sort(dt);
 }
@@ -48,7 +55,8 @@ void	route(t_data *dt)
 /**
  *	TODO: DELETE LATER
  */
-void	debug(t_data *dt)
+void
+	debug(t_data *dt)
 {
 	int	i;
 
@@ -67,7 +75,8 @@ void	debug(t_data *dt)
  * TODO: Check duplications and overflow int
  * TODO: Check if sorted
  */
-int	main(int argc, char **argv)
+int
+	main(int argc, char **argv)
 {
 	t_data		data;
 

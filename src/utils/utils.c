@@ -6,13 +6,14 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 17:25:18 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/02 10:12:15 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/14 14:44:04 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	check_dup(double *list, int size)
+void
+	check_dup(double *list, int size)
 {
 	int	i;
 	int	j;
@@ -31,7 +32,8 @@ void	check_dup(double *list, int size)
 	}
 }
 
-void	is_num(int argc, char **argv)
+void
+	is_num(int argc, char **argv)
 {
 	int	i;
 
@@ -49,7 +51,8 @@ void	is_num(int argc, char **argv)
 	}
 }
 
-int	is_sorted(t_arraylist *a)
+int
+	is_sorted(t_arraylist *a)
 {
 	int	i;
 	int	sort;

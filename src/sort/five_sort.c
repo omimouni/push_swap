@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   five_sort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/02 10:05:15 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/14 14:43:56 by omimouni         ###   ########.fr       */
+/*   Created: 2021/09/14 14:34:21 by omimouni          #+#    #+#             */
+/*   Updated: 2021/09/14 14:45:26 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void
-	ps_trigger(void)
+static double
+	get_min(t_arraylist *l)
 {
-	write(1, "Error\n", 7);
-	exit(1);
+	int		i;
+	double	min;
+
+	i = 0;
+	min = l->list[0];
+	printf("%.f", min);
+	return (0);
 }
 
 void
-	ps_error(t_data *dt)
+	ps_sort_five(t_data *dt)
 {
-	int	i;
-
-	i = 0;
-	while (i < dt->stack_a.length)
-	{
-		if (dt->stack_a.list[i] < FT_INT_MIN
-			|| dt->stack_a.list[i] > FT_INT_MAX)
-			ps_trigger();
-		i++;
-	}
-	check_dup(dt->stack_a.list, dt->stack_a.length);
+	(void)dt;
 }
