@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 11:22:16 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/14 14:44:19 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/15 08:11:23 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,5 @@ static void
 void
 	ps_sort_small(t_data *dt)
 {
-	if (dt->length == 3)
-		ps_sort_small_3(dt, dt->stack_a.list);
+	ps_sort_small_3(dt, dt->stack_a.list);
 }
