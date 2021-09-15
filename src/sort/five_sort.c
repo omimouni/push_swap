@@ -6,26 +6,33 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:34:21 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/14 14:45:26 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/15 07:41:44 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 static double
-	get_min(t_arraylist *l)
+	get_min(t_arraylist *l, int *index)
 {
-	int		i;
 	double	min;
 
-	i = 0;
+	*index = 0;
 	min = l->list[0];
-	printf("%.f", min);
-	return (0);
+	while (*index < l->length)
+	{
+		if (l->list[*index] < min)
+			min = l->list[*index];
+		*index+=1;
+	}
+	return (min);
 }
 
 void
 	ps_sort_five(t_data *dt)
 {
-	(void)dt;
+	int	index;
+
+	printf("%.f", get_min(&dt->stack_a, &index));
+	printf("\n%d", index);
 }
