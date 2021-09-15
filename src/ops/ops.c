@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ops.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: omimouni <omimouni@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 18:37:29 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/14 14:44:49 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/15 23:41:50 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,8 @@ void
 
 	n = a->list[a->length - 1];
 	i = a->length;
-	while (i > 0)
-	{
+	while (--i > 0)
 		a->list[i] = a->list[i - 1];
-		i--;
-	}
 	a->list[0] = n;
 }
 
