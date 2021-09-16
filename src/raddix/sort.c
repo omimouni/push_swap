@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 08:41:11 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/16 17:33:26 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/16 18:11:52 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static t_data
 	*ps_raddix_init(t_elem *elm, t_data *dt)
 {
 	t_data	*dt_i;
-	int	i;
+	int		i;
 
 	dt_i = malloc(sizeof(t_data));
 	dt_i->length = dt->length;
@@ -29,14 +29,39 @@ static t_data
 	return (dt_i);
 }
 
+static void
+	ps_raddix_sort(t_elem *elm, t_data *dt)
+{
+	t_data	*dt_i;
+	int		i;
+	int		j;
+
+	dt_i = ps_raddix_init(elm, dt);
+	i = 0;
+	while (i < (sizeof(double) * 8) && is_sorted(&dt_i->stack_a))
+	{
+		j = 0;
+		while (j < dt->length)
+		{
+			if (((int)dt_i->stack_a.list[dt_i->stack_a.length - 1] >> i) & 1)
+				ps_exec("ra", dt_i);
+			else
+				ps_exec("pb", dt_i);
+			j++;
+		}
+		while (dt_i->stack_b.length)
+			ps_exec("pa", dt_i);
+		i++;
+	}
+	free(dt_i);
+}
+
 void
 	ps_sort(t_data *dt)
 {
 	int		i;
 	int		j;
 	t_elem	*elm;
-	t_data	*dt_i;
-	int		num;
 
 	i = 0;
 	elm = malloc(sizeof(t_elem) * dt->length);
@@ -54,25 +79,6 @@ void
 		i++;
 	}
 	elm = ps_sort_sorted(elm, dt->length);
-	dt_i = ps_raddix_init(elm, dt);
-	i = 0;
-	while (i < (sizeof(double) * 8) && is_sorted(&dt_i->stack_a))
-	{
-		j = 0;
-		while (j < dt->length)
-		{
-			num = (int)dt_i->stack_a.list[dt_i->stack_a.length - 1];
-			if ((num>>i)&1)
-				ps_exec("ra", dt_i);
-			else
-				ps_exec("pb", dt_i);
-			j++;
-		}
-
-		while(dt_i->stack_b.length)
-			ps_exec("pa", dt_i);
-		i++;
-	}
+	ps_raddix_sort(elm, dt);
 	free(elm);
-	free(dt_i);
 }

@@ -6,7 +6,7 @@
 #    By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/05 17:38:34 by omimouni          #+#    #+#              #
-#    Updated: 2021/09/16 15:17:09 by omimouni         ###   ########.fr        #
+#    Updated: 2021/09/16 18:04:23 by omimouni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ FLAGS = -g -I./include -I./libft/include -fsanitize=address -D DEBUG=0
 LIBFT = libs/libft.a
 
 $(NAME):  $(LIBFT) $(OBJS)
-	@gcc $(OBJS)  $(LIBFT)  -fsanitize=address -o $(NAME)
+	@gcc $(OBJS) -fsanitize=address  $(LIBFT) -o $(NAME)
 	@echo "\033[0;32m\n> ./push_swap compiled.\033[0m"
 
 all: $(NAME)
