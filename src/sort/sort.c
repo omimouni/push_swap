@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 08:41:11 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/15 10:53:35 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/16 09:47:09 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,5 @@ void
 		i++;
 	}
 	elm = ps_sort_sorted(elm, dt->length);
+	ps_markup_symbol(dt, elm);
 }
