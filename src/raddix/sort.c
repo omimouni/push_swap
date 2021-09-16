@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: omimouni <omimouni@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 08:41:11 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/16 18:13:27 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/16 18:50:00 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ static void
 			ps_exec("pa", dt_i);
 		i++;
 	}
+	free(dt_i->stack_a.list);
+	free(dt_i->stack_b.list);
 	free(dt_i);
 }
 
