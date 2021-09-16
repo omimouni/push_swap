@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 08:41:11 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/16 11:14:36 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/16 13:27:45 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,11 @@ void
 		i++;
 	}
 	elm = ps_sort_sorted(elm, dt->length);
+	
+	i = 0;
+	while (i < dt->length)
+	{
+		printf("%.f \n", elm[i].num);
+		i++;
+	}
 }
