@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 08:41:11 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/16 16:33:51 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/16 16:46:47 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,13 +54,17 @@ void
 	elm = ps_sort_sorted(elm, dt->length);
 	dt_i = ps_raddix_init(elm, dt);
 	i = 0;
+	int j;
 	while (i < dt_i->length)
 	{
-		printf("%.f %d%d%d\n", dt_i->stack_a.list[i], 
-			((int)(dt_i->stack_a.list[i])>>2)&1,
-			((int)(dt_i->stack_a.list[i])>>1)&1,
-			((int)(dt_i->stack_a.list[i])>>0)&1
-			);
+		printf("%.f ", dt_i->stack_a.list[i]);
+		j = sizeof(double);
+		while (j)
+		{
+			printf("%d", (((int)dt_i->stack_a.list[i])>>(j - 1))&1);
+			j--;
+		}
+		printf("\n");
 		i++;
 	}
 	free(elm);
