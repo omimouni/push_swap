@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   markup.c                                           :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/15 10:53:02 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/16 09:49:50 by omimouni         ###   ########.fr       */
+/*   Created: 2021/09/03 08:41:11 by omimouni          #+#    #+#             */
+/*   Updated: 2021/09/16 11:14:36 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 void
-	ps_markup_symbol(t_data *dt, t_elem *elm)
+	ps_sort(t_data *dt)
 {
-	int	i;
+	int		i;
+	t_elem	*elm;
 
+	i = 0;
+	elm = malloc(sizeof(t_elem) * dt->length);
+	while (i < dt->length)
+	{
+		elm[i].num = dt->stack_a.list[i];
+		elm[i].symbol = i;
+		i++;
+	}
+	ps_sort_bubble_sort(elm, dt->length);
 	i = 0;
 	while (i < dt->length)
 	{
-		printf("%.f\tnumber\n%d\tindex\n%d\tstack\n\n",
-			elm[i].num, elm[i].index, elm[i].symbol);
+		elm[i].index = i;
 		i++;
 	}
+	elm = ps_sort_sorted(elm, dt->length);
 }
