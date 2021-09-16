@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:42:36 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/16 15:58:15 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/16 17:26:50 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_elem
 	int		symbol;
 }	t_elem;
 
+void		debug(t_data *dt);
 void		ps_error(t_data *dt);
 void		ps_trigger(void);
 void		check_dup(double *list, int size);

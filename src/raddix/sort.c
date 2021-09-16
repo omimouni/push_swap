@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 08:41:11 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/16 16:46:47 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/16 17:27:05 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,10 @@ void
 	ps_sort(t_data *dt)
 {
 	int		i;
+	int		j;
 	t_elem	*elm;
 	t_data	*dt_i;
+	int		num;
 
 	i = 0;
 	elm = malloc(sizeof(t_elem) * dt->length);
@@ -54,17 +56,21 @@ void
 	elm = ps_sort_sorted(elm, dt->length);
 	dt_i = ps_raddix_init(elm, dt);
 	i = 0;
-	int j;
-	while (i < dt_i->length)
+	while (i < sizeof(double) && is_sorted(&dt_i->stack_a))
 	{
-		printf("%.f ", dt_i->stack_a.list[i]);
-		j = sizeof(double);
-		while (j)
+		j = 0;
+		while (j < dt->length)
 		{
-			printf("%d", (((int)dt_i->stack_a.list[i])>>(j - 1))&1);
-			j--;
+			num = (int)dt_i->stack_a.list[dt_i->stack_a.length - 1];
+			if ((num>>i)&1)
+				ps_exec("ra", dt_i);
+			else
+				ps_exec("pb", dt_i);
+			j++;
 		}
-		printf("\n");
+
+		while(dt_i->stack_b.length)
+			ps_exec("pa", dt_i);
 		i++;
 	}
 	free(elm);
