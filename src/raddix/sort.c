@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 08:41:11 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/16 17:27:05 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/16 17:33:26 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void
 	elm = ps_sort_sorted(elm, dt->length);
 	dt_i = ps_raddix_init(elm, dt);
 	i = 0;
-	while (i < sizeof(double) && is_sorted(&dt_i->stack_a))
+	while (i < (sizeof(double) * 8) && is_sorted(&dt_i->stack_a))
 	{
 		j = 0;
 		while (j < dt->length)
