@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 08:41:11 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/16 18:11:52 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/16 18:13:27 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void
 	ps_raddix_sort(t_elem *elm, t_data *dt)
 {
 	t_data	*dt_i;
-	int		i;
+	size_t	i;
 	int		j;
 
 	dt_i = ps_raddix_init(elm, dt);
@@ -60,7 +60,6 @@ void
 	ps_sort(t_data *dt)
 {
 	int		i;
-	int		j;
 	t_elem	*elm;
 
 	i = 0;

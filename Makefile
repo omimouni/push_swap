@@ -6,14 +6,14 @@
 #    By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/05 17:38:34 by omimouni          #+#    #+#              #
-#    Updated: 2021/09/16 18:04:23 by omimouni         ###   ########.fr        #
+#    Updated: 2021/09/16 18:12:28 by omimouni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= push_swap
 SRCS	= $(wildcard src/*.c src/**/*.c)
 OBJS	= $(subst src/,,$(addprefix build/, $(patsubst %.c,%.o, $(SRCS))))
-FLAGS = -g -I./include -I./libft/include -fsanitize=address -D DEBUG=0
+FLAGS = -g -I./include -I./libft/include -Wall -Werror -Wextra -fsanitize=address -D DEBUG=0
 
 LIBFT = libs/libft.a
 

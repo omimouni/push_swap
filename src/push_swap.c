@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:42:52 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/16 18:02:44 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/16 18:15:11 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,24 +53,6 @@ void
 }
 
 /**
- *	TODO: DELETE LATER
- */
-void
-	debug(t_data *dt)
-{
-	int	i;
-
-	printf("\n\nDEBUG------\nA : \n");
-	i = dt->stack_a.length;
-	while (i >= 1)
-		printf("%.f\n", dt->stack_a.list[--i]);
-	printf("\nB : \n");
-	i = dt->stack_b.length;
-	while (i >= 1)
-		printf("%.f\n", dt->stack_b.list[--i]);
-}
-
-/**
  * TODO: Check if args are numbers
  * TODO: Check duplications and overflow int
  * TODO: Check if sorted
@@ -85,8 +67,6 @@ int
 	ps_error(&data);
 	if (is_sorted(&data.stack_a))
 		route(&data);
-	if (DEBUG)
-		debug(&data);
 	dt_free(&data);
 	return (0);
 }
