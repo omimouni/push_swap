@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: omimouni <omimouni@student.1337.ma>        +#+  +:+       +#+         #
+#    By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/05 17:38:34 by omimouni          #+#    #+#              #
-#    Updated: 2021/09/16 18:54:23 by omimouni         ###   ########.fr        #
+#    Updated: 2021/09/17 07:21:12 by omimouni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ build/%.o: src/%.c
 	@echo "\033[1;35m  $@ compiled\033[0m"
 
 files:
-	@echo $(SRCS)
+	@echo $(SRCS) | tr -s ' ' '\n'
 
 $(LIBFT): 
 	@make -sC ./libft

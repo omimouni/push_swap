@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:34:21 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/15 10:01:54 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/17 07:26:32 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,16 @@ void
 	while (ps_min_index(&dt->stack_a, &i))
 		ps_rotate_custom(dt->length, i, dt);
 	ps_exec("pb", dt);
-	while (ps_min_index(&dt->stack_a, &i))
-		ps_rotate_custom(dt->length, i, dt);
-	ps_exec("pb", dt);
+	if (dt->length == 5)
+	{
+		while (ps_min_index(&dt->stack_a, &i))
+			ps_rotate_custom(dt->length, i, dt);
+		ps_exec("pb", dt);
+	}
 	if (dt->stack_b.list[1] < dt->stack_b.list[0])
 		ps_exec("sb", dt);
 	ps_sort_small(dt);
 	ps_exec("pa", dt);
-	ps_exec("pa", dt);
+	if (dt->length == 5)
+		ps_exec("pa", dt);
 }

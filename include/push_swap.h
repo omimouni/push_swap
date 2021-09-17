@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omimouni <omimouni@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:42:36 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/16 18:57:18 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/17 07:18:25 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,5 @@ void		ps_sort(t_data *dt);
 void		ps_sort_bubble_sort(t_elem *elm, int length);
 t_elem		*ps_sort_sorted(t_elem *elm, int length);
 
+double	ps_parse(const char *str);
 #endif

@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:42:52 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/16 18:15:11 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/17 07:23:43 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ static void
 
 /**
  * 	TODO: sort small numbers
+ *  TODO: Fix 4 digits thing
  *	TODO: General algorithm to sort everything
  */
 void
