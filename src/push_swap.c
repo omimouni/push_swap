@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:42:52 by omimouni          #+#    #+#             */
-/*   Updated: 2021/09/17 07:23:43 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/09/17 07:56:41 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void
 	dt->length = argc - 1;
 	i = argc;
 	while (i > 1)
-		ft_arraylist_push(atof(argv[--i]), &(dt->stack_a));
+		ft_arraylist_push(ps_parse(argv[--i]), &(dt->stack_a));
 }
 
 static void
